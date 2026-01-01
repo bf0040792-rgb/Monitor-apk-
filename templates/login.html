@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Access</title>
+    <style>
+        /* Pura Page Design */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f6f9; /* Halka Grey Background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh; /* Puri Screen Height */
+        }
+
+        /* Main Card Design */
+        .container {
+            background-color: #ffffff;
+            width: 90%;
+            max-width: 400px; /* Mobile pe full, PC pe fix width */
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        h2 { color: #333; margin-bottom: 5px; }
+        p { color: #666; font-size: 14px; margin-bottom: 20px; }
+
+        /* Input Fields Design */
+        input {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-sizing: border-box; /* Padding se size kharab nahi hoga */
+            font-size: 16px;
+            outline: none;
+            transition: 0.3s;
+        }
+
+        input:focus {
+            border-color: #007bff;
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.2);
+        }
+
+        /* Buttons Design */
+        .btn-login {
+            width: 100%;
+            padding: 12px;
+            background-color: #007bff; /* Blue Color */
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .btn-login:hover { background-color: #0056b3; }
+
+        .btn-signup {
+            width: 100%;
+            padding: 12px;
+            background-color: #28a745; /* Green Color */
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .btn-signup:hover { background-color: #218838; }
+
+        /* Divider Line */
+        .divider {
+            margin: 25px 0;
+            border-top: 1px solid #eee;
+            position: relative;
+        }
+        .divider span {
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: white;
+            padding: 0 10px;
+            color: #999;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- LOGIN SECTION -->
+        <h2>Welcome Back</h2>
+        <p>Login to manage your monitors</p>
+        
+        <form method="POST" action="/">
+            <input type="email" name="email" placeholder="Enter your email" required>
+            <input type="password" name="password" placeholder="Enter password" required>
+            <button type="submit" class="btn-login">Login Securely</button>
+        </form>
+
+        <!-- Divider -->
+        <div class="divider">
+            <span>OR</span>
+        </div>
+
+        <!-- SIGNUP SECTION -->
+        <h3>New User?</h3>
+        <form method="POST" action="/signup">
+            <input type="email" name="email" placeholder="New Email Address" required>
+            <input type="password" name="password" placeholder="Create Password" required>
+            <button type="submit" class="btn-signup">Create Account</button>
+        </form>
+    </div>
+
+</body>
+</html>
